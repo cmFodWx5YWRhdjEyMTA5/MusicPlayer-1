@@ -3,13 +3,14 @@
           package="com.ravipatel.music">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
+        android:name="com.ravipatel.music.MusicPlayerApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/mp.app.name"
         android:supportsRtl="true"
-        android:name="com.ravipatel.music.MusicPlayerApplication"
         android:theme="@style/MP.Theme">
         <activity
             android:name="com.ravipatel.music.ui.main.MainActivity"
@@ -21,8 +22,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:label="@string/mp.activity.title.file_system"
             android:name="com.ravipatel.music.ui.local.filesystem.FileSystemActivity"
+            android:label="@string/mp.activity.title.file_system"
             android:screenOrientation="portrait"
             />
         <activity
